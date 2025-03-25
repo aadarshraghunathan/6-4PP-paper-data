@@ -1,0 +1,33 @@
+Lipid Eq 303K 100ps
+ &cntrl
+  imin=0,
+  ntx=1,
+  irest=0,
+  ntc=2,
+  ntf=2,
+  nstlim=1000000,
+  ntt=3,
+  gamma_ln=1.0,
+  temp0=300,
+  ntpr=50,
+  ntwr=50,
+  ntwx=0,
+  dt=0.002,
+  ig=-1,
+  ntb=2,
+  ntp=1,
+  cut=10.0,
+  ioutfm=1,
+  ntxo=2,
+  nmropt=1,
+  infe =1 ,
+&end
+&wt
+  type='END'
+&end
+&pmd
+output_file='us_eq.dat'
+output_freq=10000
+cv_file='cv_eq.in'
+/
+

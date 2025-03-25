@@ -1,0 +1,11 @@
+RAD4: initial minimization whole system
+ &cntrl
+  imin=1,       ! choose a minimization run
+  maxcyc=25000,  ! maximum minimization cycles
+  ncyc=1000,    ! the steepest descent algorithm for the first 0-ncyc cycles, then switches the conjugate gradient algorithm for ncyc-maxcyc cycles
+  cut=10.0,     ! nonbonded cutoff distance in angstroms
+  ntb=1,        ! periodic boundaries for constant volume
+  ntr=0,        ! no position restraints
+  ntx=1,        ! read coordinates but not velocities from ascii formatted inpcrd coordinate file
+  ntpr=100,     ! print to the amber mdout output file every ntpr cycles
+ /

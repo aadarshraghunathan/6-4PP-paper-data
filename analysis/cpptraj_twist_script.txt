@@ -1,0 +1,6 @@
+## To run cpptraj -i cpptraj_twist_script.txt
+
+parm rad4.prmtop 
+trajin $TRAJ_FILE$
+reference $REF_FILE$ 
+nastruct calcnohb reference naout $OUT_FILE$

@@ -1,0 +1,33 @@
+Lipid production 303K 5ns
+ &cntrl
+  imin=0,          ! Molecular dynamics
+  ntx=1,           ! Positions and velocities read formatted
+  irest=0,         ! Restart calculation
+  ntc=2,           ! SHAKE on for bonds with hydrogen
+  ntf=2,           ! No force evaluation for bonds with hydrogen
+  nstlim=2500000, ! Number of MD steps
+  ntt=3,           ! Langevin thermostat
+  gamma_ln=1.0,    ! Collision frequency for thermostat
+  temp0=300.0,     ! Simulation temperature (K)
+  ntpr=50000,      ! Print to mdout every ntpr steps
+  ntwr=50000,     ! Write a restart file every ntwr steps
+  ntwx=50000,      ! Write to trajectory file every ntwc steps
+  dt=0.002,        ! Timestep (ps)
+  ig=-1,           ! Random seed for Langevin thermostat
+  ntb=2,           ! Constant pressure periodic boundary conditions
+  ntp=1,           ! Anisotropic pressure coupling
+  cut=10.0,        ! Nonbonded cutoff (Angstroms)
+  ioutfm=1,        ! Write binary NetCDF trajectory
+  ntxo=2,          ! Write binary restart file
+  nmropt=1, 
+  infe = 1,
+&end
+&wt
+ type='END'
+&end
+&pmd
+output_file='us_prod.dat'
+output_freq=50
+cv_file='cv_prod.in'
+/
+

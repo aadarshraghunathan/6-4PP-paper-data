@@ -1,0 +1,30 @@
+Alanine NEB initial MD with small K
+&cntrl
+   imin = 0, irest = 1, ntx = 5,
+   ntc=2, ntf=2,
+   ntpr=500, ntwx=500000, ntwr=50,
+   ntb = 2, ntp=1, cut = 10.0, 
+   nstlim = 1000000, nscm=0,
+   dt = 0.002, ig=-1,
+   ntt = 3, gamma_ln=50.0,
+   temp0=300.0,
+   tgtfitmask=":1-620&!@H=",
+   tgtrmsmask=":1-620&!@H=",
+   ineb = 1,skmin = 10,skmax = 10,
+   nmropt=1,
+ /
+ &wt type='TEMP0', istep1=0,istep2=100000,
+   value1=300.0, value2=400.0
+ /
+ &wt type='TEMP0', istep1=100001,istep2=800000,
+   value1=400.0, value2=400.0
+ /
+ &wt type='TEMP0', istep1=800001,istep2=900000,
+   value1=400.0, value2=300.0
+ /
+ &wt type='TEMP0', istep1=900001,istep2=1000000,
+   value1=300.0, value2=300.0
+ /
+ &wt type='END'
+ /
+

@@ -1,0 +1,16 @@
+RAD4: initial minimization solvent + ions
+ &cntrl
+  imin=1,       ! choose a minimization run
+  maxcyc=250000,  ! maximum minimization cycles
+  ncyc=10000,    ! the steepest descent algorithm for the first 0-ncyc cycles, then switches the conjugate gradient algorithm for ncyc-maxcyc cycles
+  cut=10.0,     ! nonbonded cutoff distance in angstroms
+  ntb=1,        ! periodic boundaries for constant volume
+  ntr=1,        ! use position restraints based on the group input given in the input file
+  ntx=1,        ! read coordinates but not velocities from ascii formatted inpcrd coordinate file
+  ntpr=100,     ! print to the amber mdout output file every ntpr cycles
+ /
+Hold the protein fixed
+100.0           ! force constant of 100 kcal mol-1 angstrom-2 and restrain residues 1 through 620 (the protein and dna)
+RES 1 620
+END
+END
