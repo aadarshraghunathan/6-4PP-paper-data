@@ -1,4 +1,4 @@
-Lipid production 303K 5ns
+DNA Unbiased 10ns 300K 
  &cntrl
   imin=0,          ! Molecular dynamics
   ntx=1,           ! Positions and velocities read formatted
